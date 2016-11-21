@@ -107,9 +107,12 @@ describe("About Functions", function() {
       return a * b;
     };
 
-    console.log(multiply.toString());
+    // Logging outputs to check for matching outputs in browser console
 
+    console.log(multiply.toString());
     console.log("function (a, b) {\n      // An internal comment\n      return a * b;\n    }");
+    
+    // The below matches the output of 'multiply.toString()' in both the koans output and the console, but doesn't pass.
 
     expect(multiply.toString()).toBe("function (a, b) {\n      // An internal comment\n      return a * b;\n    }");
     
